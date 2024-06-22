@@ -24,7 +24,7 @@ def RockPaperScissors():
     ch=choice();
     comp=computer();
     
-    if((ch==1 and comp==2) or (ch==2 and comp==1) or (ch==3 and comp==2) or (ch==1 and comp==3)):
+    if((ch==2 and comp==1) or (ch==3 and comp==2) or (ch==1 and comp==3)):
         print("You Win!!!")
     elif(ch==comp):
         print("It is a Tie")
