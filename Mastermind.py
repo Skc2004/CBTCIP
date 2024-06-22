@@ -17,11 +17,11 @@ def guess(length):
             print(f"Invalid input. Please enter a {length}-digit number.")
 
 def hint(num, g):
-    hint = ['_' for _ in range(len(num))]
+    hint_get = ['_' for _ in range(len(num))]
     for i in range(len(num)):
         if g[i] == num[i]:
-            hint[i] = g[i]
-    return ''.join(hint)
+            hint_get[i] = g[i]
+    return ''.join(hint_get)
 
 def play_round(s, g):
     print(f"\n{s}'s turn to set the number.")
@@ -31,13 +31,13 @@ def play_round(s, g):
     print(f"\n{g}'s turn to guess the number.")
     while True:
         attempts += 1
-        guess = guess(len(number))
-        if guess == number:
+        get_guess = guess(len(number))
+        if get_guess == number:
             print(f"Correct! {g} guessed the number in {attempts} attempts.")
             return attempts
         else:
-            hint = hint(number, guess)
-            print(f"Hint: {hint}")
+            hint_get = hint(number, get_guess)
+            print(f"Hint: {hint_get}")
 
 def mastermind():
     print("Who is The Mastermind!")
